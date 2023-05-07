@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/my_gradient"
+    tools:context=".GameActivity">
+
+
+    <ImageView
+        android:id="@+id/image_button_back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="15dp"
+        android:contentDescription="@string/button_back"
+        android:src="@drawable/bott_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/button_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="Minus"
+        android:src="@drawable/min"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/image_bet"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/bet_button"
+        app:layout_constraintBottom_toTopOf="@+id/image_button_bet"
+        app:layout_constraintEnd_toEndOf="@+id/button_plus"
+        app:layout_constraintStart_toStartOf="@id/button_minus" />
+
+
+    <ImageView
+        android:id="@+id/image_button_bet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="@string/button_bet"
+        android:src="@drawable/bet_pole"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_minus" />
+
+    <ImageView
+        android:id="@+id/button_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="Plus Button"
+        android:src="@drawable/plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_button_bet" />
+
+    <TextView
+        android:id="@+id/bet_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/_05"
+        android:textColor="@color/gray"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/image_button_bet"
+        app:layout_constraintEnd_toEndOf="@id/image_button_bet"
+        app:layout_constraintStart_toStartOf="@id/image_button_bet"
+        app:layout_constraintTop_toTopOf="@id/image_button_bet" />
+
+
+    <ImageView
+        android:id="@+id/image_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/button_bet"
+        android:src="@drawable/money"
+        app:layout_constraintBottom_toTopOf="@+id/image_ramka"
+        app:layout_constraintEnd_toStartOf="@+id/image_button_info"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toEndOf="@+id/image_button_back" />
+
+    <TextView
+        android:id="@+id/total_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_00000500"
+        android:textColor="@color/gray"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/image_money"
+        app:layout_constraintEnd_toEndOf="@+id/image_money"
+        app:layout_constraintStart_toStartOf="@+id/image_money"
+        app:layout_constraintTop_toTopOf="@id/image_money" />
+
+    <ImageView
+        android:id="@+id/image_button_info"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/button_info"
+        android:src="@drawable/bott_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_button_spin"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="15dp"
+        android:contentDescription="@string/button_spin"
+        android:src="@drawable/bott_spin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_ramka"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/ramka"
+        android:src="@drawable/ramka_pole"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ramka_layout"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/column1_ll"
+            android:layout_width="55dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/pole"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/ramka_layout"
+            app:layout_constraintEnd_toStartOf="@id/column2_ll"
+            app:layout_constraintStart_toStartOf="@id/ramka_layout"
+            app:layout_constraintTop_toTopOf="@id/ramka_layout">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/image_pager"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/image_pager2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/image_pager3"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/column2_ll"
+            android:layout_width="55dp"
+            android:layout_height="140dp"
+            android:background="@drawable/pole"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/ramka_layout"
+            app:layout_constraintEnd_toStartOf="@id/column3_ll"
+            app:layout_constraintStart_toEndOf="@id/column1_ll"
+            app:layout_constraintTop_toTopOf="@id/ramka_layout">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/image_pager4"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/image_pager5"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/image_pager6"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/column3_ll"
+            android:layout_width="55dp"
+            android:layout_height="140dp"
+            android:layout_marginEnd="25dp"
+            android:gravity="center"
+            android:background="@drawable/pole"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/ramka_layout"
+            app:layout_constraintEnd_toEndOf="@id/ramka_layout"
+            app:layout_constraintStart_toEndOf="@id/column2_ll"
+            app:layout_constraintTop_toTopOf="@id/ramka_layout">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/image_pager7"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/image_pager8"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/image_pager9"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_line_blue"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="line blue"
+            android:src="@drawable/line_blue"
+            app:layout_constraintBottom_toBottomOf="@id/ramka_layout"
+            app:layout_constraintEnd_toEndOf="@id/ramka_layout"
+            app:layout_constraintStart_toStartOf="@id/ramka_layout"
+            app:layout_constraintTop_toTopOf="@id/ramka_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

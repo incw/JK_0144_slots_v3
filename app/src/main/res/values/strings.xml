@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">JK_0144_slots_v3</string>
+    <string name="logo">Logo</string>
+    <string name="play_button">Play Button</string>
+    <string name="button_back">Button Back</string>
+    <string name="button_bet">Button Bet</string>
+    <string name="button_info">Button Info</string>
+    <string name="button_spin">Button Spin</string>
+    <string name="ramka">Рамка</string>
+    <string name="_05">05</string>
+    <string name="_00000500">00000500</string>
+    <string name="_00">00</string>
+</resources>
